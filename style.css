@@ -1,0 +1,105 @@
+:root {
+  --bg-color: #1A237E;
+  --board-bg: #FFEB3B;
+  --box-bg: #2196F3;
+  --box-text: #FFFFFF;
+  --btn-bg: #FFEB3B;
+  --btn-text: #1A237E;
+  --msg-text: #FFFFFF;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  text-align: center;
+  font-family: var(--font-family);
+  padding: 40px;
+}
+h1 {
+  color: #FFFFFF;
+}
+
+.container {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.game {
+  width: 100%;
+  max-width: 70vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1vmin;
+  background-color: var(--board-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1.5rem var(--shadow);
+}
+
+.box {
+  width: 30%;
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+  border: none;
+  font-size: 6vmin;
+  color: var(--box-text);
+  background-color: var(--box-bg);
+  box-shadow: 0 0 0.6rem var(--shadow);
+  transition: transform 0.2s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+#reset-btn,
+#new-btn {
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 1rem;
+  border: none;
+  margin: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #FBC02D;
+}
+
+#msg {
+  color: var(--msg-text);
+  font-size: 4vmin;
+  padding: 0 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.msg-container {
+  min-height: 80vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
